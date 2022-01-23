@@ -1,0 +1,370 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100vw;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 10px;
+  border-radius: 30px;
+  background-color: #5a5a5a;
+}
+
+body {
+  width: 100vw;
+  background-color: #fff;
+  overflow-x: hidden;
+}
+
+
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 8vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 75px;
+  background-color: #1CA832;
+  box-shadow: 0 20px 10px #00000010;
+  transition: all 0.2s ease;
+}
+
+.header h1 {
+  display: grid;
+  place-items: center;
+}
+
+.header h1 a {
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.header button {
+  padding: 5px;
+  background-color: transparent;
+  border: none;
+  display: grid;
+  place-items: center;
+  border-radius: 30px;
+}
+
+.header .menu-container {
+  position: absolute;
+  z-index: 1;
+  top: -50vh;
+  right: 0;
+  height: fit-content;
+  width: 20vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #ffffff90;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.header .outside {
+  position: absolute;
+  display: none;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.menu-container .menu-content {
+  width: 90%;
+  padding: 20px 30px 30px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.menu-content h3 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 26px;
+}
+
+.menu-content ol {
+  margin-top: 20px;
+}
+
+.menu-content ol li {
+  display: flex;
+}
+
+.menu-content ol li a {
+  padding: 10px 0px;
+  font-weight: 500;
+  color: #555;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.menu-content ol li:hover a {
+  color: #fff;
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+/*main*/
+
+.main {
+  width: 60%;
+  padding: 10vh 0 0 80px;
+}
+
+.main h2 {
+    font-size: 28px;
+}
+
+.main .title {
+    width: fit-content;
+    margin-top: 30px;
+    font-size: 22px;
+    padding-bottom: 10px;
+}
+
+.main .title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    margin-top: 45px;
+    height: 6px;
+    width: 30%;
+    background-color: #EE2877;
+}
+
+.main .pembuka {
+    text-align: justify;
+    margin-top: 20px;
+}
+
+.main ol {
+  text-align: justify;
+  padding-left: 30px;
+  margin-top: 10px;
+}
+
+.main .awal-rancangan {
+  text-align: justify;
+  margin-top: 50px;
+}
+
+.main .rancangan-menu {
+  z-index: -1;
+  height: 5vh;
+  margin-top: 30px;
+  width: 21%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 1.5px solid #0000007f;
+}
+
+.rancangan-menu > li {
+  height: 100%;
+  display: grid;
+  place-items: center;
+  font-weight: 600;
+  opacity: 0.7;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.rancangan-menu > li:hover {
+  opacity: 1;
+}
+
+.rancangan-menu .stilasi-btn {
+  opacity: 1;
+}
+
+.rancangan-menu .deformasi-btn {
+  margin-left: 30px;
+}
+
+.rancangan-menu .indicator-menu {
+  position: absolute;
+  margin-top: 35px;
+  height: 5px;
+  width: 48px;
+  transition: all 0.2s ease;
+  background-color: #1CA832;
+}
+
+.main .rancangan-content {
+  height: 80vh;
+  width: 100%;
+}
+
+.rancangan-content > div {
+  height: fit-content;
+  padding-top: 30px;
+}
+
+.stilasi, .deformasi {
+  width: 55%;
+  background-color: #fff;
+  position: absolute;
+}
+
+.stilasi h3 {
+  font-size: 20px;
+}
+
+.stilasi p {
+  margin-top: 20px;
+}
+
+.deformasi {
+  z-index: -1;
+}
+
+.deformasi p {
+  margin-top: 20px;
+}
+
+.main .border {
+  height: 120%;
+  position: fixed;
+  width: 20%;
+  right: 0;
+  top: -10%;
+  border-radius: 50% 0 0 50%;
+  display: grid;
+  place-items: center;
+  background-color: #000000ef;
+  background-image: url(../img/logam.jpg);
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+}
+
+.border p {
+  color: #fff;
+  margin: 50px 0 0 50px;
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 30px;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+}
+
+.main .btn-navigate {
+  position: relative;
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-navigate button {
+  padding: 10px 20px;
+  background-color: #EE2877;
+  border-radius: 30px;
+  border: none;
+  box-shadow: 0 10px 10px #00000030;
+}
+
+.btn-navigate button a {
+  color: #fff;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-decoration: none;
+}
+
+.btn-navigate button a .iconify {
+  margin-left: 8px;
+}
+
+.btn-navigate button:nth-child(1) a .iconify {
+  margin-left: 0;
+  margin-right: 8px;
+}
+
+@media(max-width:500px){
+  .header {
+    padding: 0 30px;
+  }
+
+  .header .menu-container {
+    left: 0;
+    width: 100vw;
+  }
+
+  .main {
+    width: 100%;
+    padding: 0 30px;
+  }
+
+  .main p {
+    font-size: 15px;
+  }
+
+  .main ol {
+    margin-top: 20px;
+    text-align: left;
+    font-size: 15px;
+  }
+
+  .main ol li {
+    margin-top: 10px;
+  }
+
+  .main .border {
+    display: none;
+  }
+  
+  .main .rancangan-menu {
+    width: fit-content;
+  }
+
+  .rancangan-menu .indicator-menu {
+    z-index: 1;
+  }
+
+  .main .rancangan-content {
+    height: 150vh;
+  }
+
+  .rancangan-content.spread {
+    height: 80vh;
+  }
+
+  .stilasi, .deformasi {
+    width: 80%;
+  }
+
+  .main .btn-navigate {
+    padding-bottom: 30px;
+    margin-top: 30px;
+  }
+
+  .btn-navigate button a {
+    font-size: 13px;
+  }
+}
+

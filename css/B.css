@@ -1,0 +1,337 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+  }
+  
+  html {
+    width: 100vw;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    width: 10px;
+    border-radius: 30px;
+    background-color: #5a5a5a;
+  }
+  
+  body {
+    width: 100vw;
+    background-color: #fff;
+    overflow-x: hidden;
+  }
+  
+  
+  .header {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 75px;
+    background-color: #1CA832;
+    box-shadow: 0 20px 10px #00000010;
+    transition: all 0.2s ease;
+  }
+  
+  .header h1 {
+    display: grid;
+    place-items: center;
+  }
+  
+  .header h1 a {
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .header button {
+    padding: 5px;
+    background-color: transparent;
+    border: none;
+    display: grid;
+    place-items: center;
+    border-radius: 30px;
+  }
+  
+  .header .menu-container {
+    position: absolute;
+    z-index: 1;
+    top: -50vh;
+    right: 0;
+    height: fit-content;
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #ffffff90;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+  }
+  
+  .header .outside {
+    position: absolute;
+    display: none;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .menu-container .menu-content {
+    width: 90%;
+    padding: 20px 30px 30px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  
+  .menu-content h3 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 26px;
+  }
+  
+  .menu-content ol {
+    margin-top: 20px;
+  }
+  
+  .menu-content ol li {
+    display: flex;
+  }
+  
+  .menu-content ol li a {
+    padding: 10px 0px;
+    font-weight: 500;
+    color: #555;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+  
+  .menu-content ol li:hover a {
+    color: #1CA832;
+    font-weight: 600;
+    margin-left: 10px;
+  }
+  
+  /*main*/
+  
+  .main {
+    width: 100%;
+    padding: 10vh 30% 20px 80px;
+  }
+  
+  .main h2 {
+      font-size: 28px;
+  }
+  
+  .main .title {
+      width: fit-content;
+      margin-top: 30px;
+      font-size: 22px;
+      padding-bottom: 10px;
+  }
+  
+  .main .title::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      margin-top: 45px;
+      height: 6px;
+      width: 30%;
+      background-color: #EE2877;
+  }
+
+  .main .pembuka {
+      text-align: justify;
+      margin-top: 20px;
+  }
+
+  .main .bahan-isi {
+    color: #fff;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      margin-top: 100px;
+  }
+
+  .batu, .logam, .plastik, .kayu, .keramik {
+    width: 100vw;
+    padding: 50px 30% 120px 80px;
+    background-color: #000000cf;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: darken;
+  }
+
+  .batu {
+    background-image: url(../img/batu-bg.jpg);
+    width: 100vw;
+  }
+
+  .bahan-isi .img-wrap {
+    width: 100%;
+    height: fit-content;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .bahan-isi .img {
+    height: 150px;
+    width: 250px;
+    box-shadow: 0 10px 10px #00000030;
+    border-radius: 30px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .gambar-batu .bahan-batu {
+    background-image: url(../img/batu-bahan.jpg);
+  }
+
+  .gambar-batu .kerajinan-batu {
+    width: 300px;
+    background-image: url(../img/kerajinan-batu.jpg);
+  }
+
+  .img-wrap .img2 {
+    margin-left: 50px;
+  }
+
+  .logam {
+    background-image: url(../img/logam-bg.jpeg);
+  }
+
+  .bahan-logam {
+    background-image: url(../img/bahan-logam.jpg);
+  }
+
+  .kerajinan-logam {
+    background-image: url(../img/kerajinan-logam.jpg);
+  }
+
+.plastik {
+  background-image: url(../img/plastik-bg.jpg);
+}
+
+.bahan-plastik {
+  background-image: url(../img/bahan-plastik.jpg);
+}
+
+.kerajinan-plastik {
+  background-image: url(../img/kerajinan-plastik.jpg);
+}
+
+  .kayu {
+    padding: 50px 30% 20px 80px;
+    background-image: url(../img/kayu-bg.jpg);
+  }
+
+  .bahan-kayu {
+    background-image: url(../img/bahan-kayu.png);
+  }
+
+  .kerajinan-kayu {
+    background-image: url(../img/kerajinan-kayu.jpg);
+  }
+
+.keramik {
+  background-image: url(../img/keramik-bg.jpg);
+}
+
+.bahan-keramik {
+  background-image: url(../img/bahan-keramik.jpg);
+}
+
+.kerajinan-keramik {
+  background-image: url(../img/kerajinan-keramik.jpeg);
+}
+
+
+.main .btn-navigate {
+  position: relative;
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-navigate button {
+  padding: 10px 20px;
+  background-color: #EE2877;
+  border-radius: 30px;
+  border: none;
+  box-shadow: 0 10px 10px #00000030;
+}
+
+.btn-navigate button a {
+  color: #fff;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-decoration: none;
+}
+
+.btn-navigate button a .iconify {
+  margin-left: 8px;
+}
+
+.btn-navigate button:nth-child(1) a .iconify {
+  margin-left: 0;
+  margin-right: 8px;
+}
+
+@media(max-width:500px){
+  .header {
+    padding: 0 30px;
+  }
+
+  .header .menu-container {
+    left: 0;
+    width: 100vw;
+  }
+
+  .main {
+    width: 100%;
+    margin-top: 10vh;
+    padding: 0 30px;
+  }
+
+  .main p {
+    font-size: 15px;
+  }
+
+  .batu, .logam, .plastik, .kayu, .keramik {
+    padding: 50px 30px 120px 30px;
+  }
+
+  .bahan-isi .img-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .bahan-isi .img {
+    height: 120px;
+    width: 200px;
+  }
+
+  .img-wrap .img2 {
+    margin: 30px 0 0 100px;
+  }
+}
