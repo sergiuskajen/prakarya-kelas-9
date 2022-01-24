@@ -224,7 +224,7 @@ body {
 }
 
 .stilasi, .deformasi {
-  width: 55%;
+  width: 100%;
   background-color: #fff;
   position: absolute;
 }
@@ -305,6 +305,21 @@ body {
   margin-right: 8px;
 }
 
+.fading {
+  opacity: 0;
+  transition: all 0.7s ease;
+  transform: translateX(-50px);
+}
+
+.prinsip.fading, .awal-rancangan.fading, .rancangan-menu.fading {
+  transform: translate(0, 50px);
+}
+
+.fading.show {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
 @media(max-width:500px){
   .header {
     padding: 0 30px;
@@ -355,7 +370,7 @@ body {
   }
 
   .stilasi, .deformasi {
-    width: 80%;
+    width: 100%;
   }
 
   .main .btn-navigate {

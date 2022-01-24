@@ -118,6 +118,11 @@ function firstReveal() {
 $(window).ready(function() {
   $('.banner-title').addClass('show');
   $('.banner-img').addClass('show');
+  $('.title').addClass('show');
+  $('.pembuka').addClass('show');
+  $('.prinsip').addClass('show');
+  $('.awal-rancangan').addClass('show');
+  $('.rancangan-menu').addClass('show');
 })
 
 /*$('.item-cta').click(function() {
